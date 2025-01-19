@@ -1,0 +1,37 @@
+[tools]
+dotnet = "latest"
+node = "22"
+chezmoi = "latest"
+starship="latest"
+awscli="latest"
+kubectl="latest"
+yarn="1"
+
+[tasks.prepare]
+run = '''
+    chmod +x ./starship.sh
+    chmod +x ./fonts.sh
+	brew install gnupg
+'''
+
+[tasks."podman:install"]
+run='''
+	brew install podman
+	podman machine init
+	podman machine start
+'''
+
+[tasks."podman:uninstall"]
+run='''
+	podman machine reset
+	brew uninstall podman
+'''
+
+[tasks."fonts:install"]
+run='./fonts.sh'
+
+[tasks."starship:install"]
+run='''
+    brew install starship
+    ./starship.sh
+'''
