@@ -54,5 +54,5 @@ config.window_background_gradient = {
 	-- segment_smoothness = 0.0,
 }
 
-config.window_background_opacity = 0.92
+config.window_background_opacity = 0.95
 return config
