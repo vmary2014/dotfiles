@@ -106,11 +106,14 @@ return {
 		{
 			source = { File = "/Users/vincent.mary/Pictures/pngegg.png" },
 			opacity = 0.05,
-			horizontal_offset = "50%",
+			horizontal_offset = "65%",
 			vertical_offset = "50%",
 			attachment = { Parallax = 0.1 },
 			repeat_y = "NoRepeat",
-			hsb = dimmer
+			repeat_x = "NoRepeat",
+			hsb = dimmer,
+			width = 1050,
+			height = 1050
 		}
 	},
 	enable_scroll_bar = true,

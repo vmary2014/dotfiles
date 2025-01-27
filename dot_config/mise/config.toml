@@ -1,11 +1,12 @@
 [tools]
-dotnet = "latest"
 node = "22"
 chezmoi = "latest"
 starship="latest"
 awscli="latest"
 kubectl="latest"
 yarn="1"
+uv="latest"
+python="latest"
 
 [tasks.prepare]
 run = '''
