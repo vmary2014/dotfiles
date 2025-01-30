@@ -1,0 +1,31 @@
+eval "$(/opt/homebrew/bin/brew shellenv)"
+eval "$(mise activate zsh)"
+eval "$(starship init zsh)"
+
+# Added by Toolbox App
+export PATH="$PATH:/Users/vincent.mary/Library/Application Support/JetBrains/Toolbox/scripts"
+export PATH="$PATH:/Applications/WezTerm.app/Contents/MacOS"
+
+# eval "$(starship init bash)"
+
+export GITHUB_USERNAME=$(security find-generic-password -a "$USER" -s 'nuget_github_username' -w)
+export NUGET_PASSWORD=$(security find-generic-password -a "$USER" -s 'nuget_password' -w)
+export NUGET_USERNAME=$(security find-generic-password -a "$USER" -s 'nuget_username' -w)
+export NUGET_GITHUB_TOKEN=$(security find-generic-password -a "$USER" -s "nuget_github_token" -w)
+export NUGET_GITHUB_USERNAME=$(security find-generic-password -a "$USER" -s 'nuget_github_username' -w)
+export DOCKER_HOST=unix:///var/folders/9l/z3810j115fz8r85zw2pf1_bw0000gp/T/podman/podman-machine-default-api.sock
+export PATH="$PATH:/Users/vincent.mary/.dotnet/tools"
+export AWS_CA_BUNDLE=~/Certificates/CA-Bundle-ZTNA.pem
+
+alias docker='podman'
+
+export CURL_CA_BUNDLE=~/Certificates/CA-Bundle-ZTNA.pem
+export SSL_CERT_FILE=~/Certificates/CA-Bundle-ZTNA.pem
+export CLICOLOR=1
+
+# Check if neofetch has not started before and if the OS is macOS
+NEOFETCH_FLAG="/tmp/.neofetch_started_$PPID"
+if [[ "$OSTYPE" == "darwin"* ]] && [[ ! -f "$NEOFETCH_FLAG" ]]; then
+  neofetch
+  touch "$NEOFETCH_FLAG"
+fi

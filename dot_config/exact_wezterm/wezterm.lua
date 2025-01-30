@@ -14,4 +14,5 @@ config.colors = theme.colors
 config.send_composed_key_when_left_alt_is_pressed = true
 config.background = theme.background
 config.enable_scroll_bar = theme.enable_scroll_bar
+
 return config
