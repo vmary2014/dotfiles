@@ -36,3 +36,23 @@ run='''
     brew install starship
     ./starship.sh
 '''
+
+[tasks."colima:install"]
+run='~/.config/mise/colima.sh'
+
+[tasks."colima:start"]
+run='''
+	colima start \
+	--profile default \
+	--activate \
+	--arch aarch64 \
+	--cpu 10 \
+	--disk 100 \
+	--memory 24 \
+	--mount ${HOME}:w \
+	--mount-inotify \
+	--ssh-agent \
+	--vm-type vz \
+	--vz-rosetta \
+	--verbose
+'''
