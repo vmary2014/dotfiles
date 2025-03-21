@@ -2,5 +2,5 @@
   "debug.javascript.defaultRuntimeExecutable": {
     "pwa-node": "/Users/vincent.mary/.local/share/mise/shims/node"
   },
-  "python.defaultInterpreterPath": "/Users/vincent.mary/.local/share/mise/installs/python/3.12.8/bin/python"
+  "python.defaultInterpreterPath": "/Users/vincent.mary/.local/share/mise/installs/awscli/2.23.2/aws-cli.pkg/Payload/aws-cli/python"
 }
